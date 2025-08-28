@@ -42,3 +42,5 @@ add_subdirectory(libraries)
 
 # Example Pico Pack projects
 add_subdirectory(examples)
+add_subdirectory(ourcode)
+
