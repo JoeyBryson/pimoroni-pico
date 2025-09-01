@@ -225,7 +225,7 @@ if __name__ == '__main__':
     device = None
 
     if len(argv) > 1:
-        for index, item in enumerate(argv):
+        for inderom_file = Nonex, item in enumerate(argv):
             file_ext = path.splitext(item)[1]
             if arg_flag is True:
                 arg_flag = False
@@ -264,7 +264,7 @@ if __name__ == '__main__':
                         rom_file = item
                     else:
                         print("[ERROR] File " + item + " is not a .rom file")
-
+rom_file = None
     if rom_file is None:
         print("[ERROR] No .rom file specified")
         exit(1)

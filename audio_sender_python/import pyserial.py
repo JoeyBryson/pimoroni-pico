@@ -39,3 +39,26 @@ def await_ack(uart, timeout=2000):
         return True
   # Error -- No Ack received
   return False
+
+if __name__ == "__main__":
+    import serial
+
+    # Set your Pico's serial device here
+    device = "/dev/ttyACM0"
+    baudrate = 115200
+
+    # Open serial port
+    uart = serial.Serial(port=device, baudrate=baudrate)
+
+    # Example data to send
+    data_bytes = bytearray([0x01, 0x02, 0x03, 0x04, 0x05])
+
+    # Send data in blocks
+    counter = 0
+    while counter < len(data_bytes):
+        counter = send_data_block(uart, data_bytes, counter)
+        if not await_ack(uart):
+            print("No ACK received, aborting.")
+            break
+
+    uart.close()
