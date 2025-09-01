@@ -1,0 +1,6 @@
+https://www.hackster.io/AlexWulff/adc-sampling-and-fft-on-raspberry-pi-pico-f883dd - using gpio pins
+https://www.hackster.io/sandeep-mistry/create-a-usb-microphone-with-the-raspberry-pi-pico-cc9bd5#:%7E:text=We%20can%20use%20it%27s%20built,into%20a%20USB%20microphone%20device. - using gpio pins
+https://raspberrypi.stackexchange.com/questions/139996/is-it-possible-to-connect-a-usb-microphone-to-pi-pico - more like what we're doing
+https://github.com/hathach/tinyusb - driver we might wanna use
+https://blog.smittytone.net/2021/10/31/how-to-send-data-to-a-raspberry-pi-pico-via-usb/ - debugging data trick(wierd)
+https://forums.raspberrypi.com/viewtopic.php?t=365745 - using TinyUSB, usefull info
