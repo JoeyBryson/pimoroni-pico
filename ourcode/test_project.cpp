@@ -2,12 +2,15 @@
 #include <math.h>
 #include <vector>
 #include <cstdlib>
+#include <stdio.h>
 
+#include "pico/stdlib.h"
 #include "libraries/pico_display_2/pico_display_2.hpp"
 #include "drivers/st7789/st7789.hpp"
 #include "libraries/pico_graphics/pico_graphics.hpp"
 #include "rgbled.hpp"
 #include "button.hpp"
+#include "hardware/timer.h"
 
 using namespace pimoroni;
 
@@ -17,9 +20,12 @@ PicoGraphics_PenRGB332 graphics(st7789.width, st7789.height, nullptr);
 RGBLED led(PicoDisplay2::LED_R, PicoDisplay2::LED_G, PicoDisplay2::LED_B);
 
 int main() {
+  stdio_init_all();
   st7789.set_backlight(255);
   uint8_t *fb = static_cast<uint8_t*>(graphics.frame_buffer);
   while(true) {
+    printf("Receiving!\n");
+    sleep_ms(100);
     for(size_t x = 0; x < 320; x++)
     {
       for(size_t y = 0; y < 240; y++)
